@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenCode Zen - Modelos Gratuitos Oficiales</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#030712',
+              card: '#0B0F19',
+              inner: '#151D30',
+              accent: '#3B82F6',
+              deepseek: '#06B6D4',
+              pickle: '#10B981',
+              mimo: '#F59E0B',
+              north: '#EC4899',
+              nemotron: '#84CC16'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body class="bg-brand-dark text-slate-100 min-h-screen pb-16">
+
+  <!-- Header / Hero Section -->
+  <header class="max-w-6xl mx-auto px-4 pt-12 pb-8 text-center border-b border-slate-900">
+    <div id="fecha-actualizacion" class="inline-flex items-center gap-2 bg-emerald-950/40 border border-emerald-800/60 px-4 py-1.5 rounded-full text-xs font-semibold text-emerald-400 mb-4 tracking-wide uppercase">
+      ⚡ Datos Oficiales Actualizados • Julio 2026</div>
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-emerald-400 to-indigo-400 bg-clip-text text-transparent">
+      Radar de Modelos Libres de OpenCode Zen
+    </h1>
+    <p class="mt-3 text-slate-400 max-w-2xl mx-auto text-sm md:text-base">
+      ¿Cero presupuesto? No hay problema. Estos son los modelos 100% gratuitos verificados directamente desde <code class="bg-slate-900/80 px-1.5 py-0.5 rounded text-indigo-400 mono text-xs">opencode.ai/docs/zen/#precios</code>.
+    </p>
+    <p id="ultima-actualizacion" class="mt-4 text-[10px] text-slate-600 mono">🔄 Última actualización: 16/07/2026 16:50</p>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 mt-10">
+    
+    <!-- Real Pricing Check Box -->
+    <div class="mb-10 bg-gradient-to-r from-blue-950/30 to-indigo-950/30 border border-indigo-500/20 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-start gap-4">
+        <span class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl mt-1">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </span>
+        <div>
+          <h4 class="font-bold text-slate-200">Alerta de Cambios en OpenCode Zen</h4>
+          <p class="text-xs text-slate-400 mt-1 leading-relaxed max-w-2xl">
+            Modelos de razonamiento masivo como <span class="text-purple-400 font-semibold">MiniMax (M2.5 / M2.7 / M3)</span> han pasado a ser modelos de cobro por token en la pasarela. No obstante, la capa gratuita se ha renovado con un nuevo estándar veloz y nuevos competidores especializados.
+          </p>
+        </div>
+      </div>
+      <a href="https://opencode.ai/docs/zen/#pricing" target="_blank" class="w-full md:w-auto px-5 py-2.5 text-center rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs font-semibold text-slate-300 transition-all duration-200">
+        Ver Precios Oficiales ↗
+      </a>
+    </div>
+
+    <!-- The Official Free 5 - Cards Grid -->
+    <section class="mb-12">
+      <h2 class="text-lg font-bold text-slate-300 mb-5 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Los 5 Modelos Oficiales sin costo ($0)
+      </h2>
+      <div id="contenedor-tarjetas-modelos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<div class="bg-brand-card border border-emerald-500/20 rounded-xl p-4 flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[9px] font-bold text-emerald-400 px-2 py-0.5 bg-emerald-950/60 border border-emerald-800 rounded">STEALTH</span>
+              <span class="text-xs font-bold text-slate-300">★ 8.8</span>
+            </div>
+            <h3 class="mono text-base font-bold text-white mb-1">Big Pickle</h3>
+            <p class="text-[11px] text-slate-400 mb-4 leading-normal">Gran todoterreno. Capacidades rotativas de prueba. Excelente para planificar.</p>
+          </div>
+          <div class="space-y-1 text-[10px] text-slate-300 border-t border-slate-900 pt-3">
+            <div class="flex justify-between"><span>Razonamiento:</span> <span class="text-emerald-400">★★★★</span>☆</div>
+            <div class="flex justify-between"><span>Estructura:</span> <span class="text-emerald-400">★★★★</span>☆</div>
+            <div class="flex justify-between"><span>Explicación:</span> <span class="text-emerald-400">★★★★★</span></div>
+            
+          </div>
+        </div>
+<div class="bg-brand-card border border-cyan-500/20 rounded-xl p-4 flex flex-col justify-between hover:border-cyan-500/50 transition-all duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[9px] font-bold text-cyan-400 px-2 py-0.5 bg-cyan-950/60 border border-cyan-800 rounded">DEF DEVEL</span>
+              <span class="text-xs font-bold text-slate-300">★ 9.5</span>
+            </div>
+            <h3 class="mono text-base font-bold text-white mb-1">DeepSeek V4 Flash</h3>
+            <p class="text-[11px] text-slate-400 mb-4 leading-normal">El rey del formato interactivo. Coherencia impecable y rapidez insuperable.</p>
+          </div>
+          <div class="space-y-1 text-[10px] text-slate-300 border-t border-slate-900 pt-3">
+            <div class="flex justify-between"><span>Razonamiento:</span> <span class="text-cyan-400">★★★★</span>☆</div>
+            <div class="flex justify-between"><span>Formatos:</span> <span class="text-cyan-400">★★★★★</span></div>
+            <div class="flex justify-between"><span>Soporte Git:</span> <span class="text-cyan-400">★★★★★</span></div>
+            
+          </div>
+        </div>
+<div class="bg-brand-card border border-amber-500/20 rounded-xl p-4 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[9px] font-bold text-amber-400 px-2 py-0.5 bg-amber-950/60 border border-amber-800 rounded">CONTEXT</span>
+              <span class="text-xs font-bold text-slate-300">★ 8.0</span>
+            </div>
+            <h3 class="mono text-base font-bold text-white mb-1">MiMo V2.5</h3>
+            <p class="text-[11px] text-slate-400 mb-4 leading-normal">Ventana de contexto enorme de Xiaomi. Ultra veloz procesando archivos completos.</p>
+          </div>
+          <div class="space-y-1 text-[10px] text-slate-300 border-t border-slate-900 pt-3">
+            <div class="flex justify-between"><span>Contexto:</span> <span class="text-amber-400">★★★★★</span></div>
+            <div class="flex justify-between"><span>Velocidad:</span> <span class="text-amber-400">★★★★★</span></div>
+            <div class="flex justify-between"><span>Precisión:</span> <span class="text-amber-400">★★★</span>☆☆</div>
+            
+          </div>
+        </div>
+<div class="bg-brand-card border border-pink-500/20 rounded-xl p-4 flex flex-col justify-between hover:border-pink-500/50 transition-all duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[9px] font-bold text-pink-400 px-2 py-0.5 bg-pink-950/60 border border-pink-800 rounded">COMPLEMENTO</span>
+              <span class="text-xs font-bold text-slate-300">★ 7.2</span>
+            </div>
+            <h3 class="mono text-base font-bold text-white mb-1">North Mini Code</h3>
+            <p class="text-[11px] text-slate-400 mb-4 leading-normal">Pequeño, rápido y ágil. Ideal para tareas repetitivas y código rápido.</p>
+          </div>
+          <div class="space-y-1 text-[10px] text-slate-300 border-t border-slate-900 pt-3">
+            <div class="flex justify-between"><span>Razonamiento:</span> <span class="text-pink-400">★★★</span>☆☆</div>
+            <div class="flex justify-between"><span>Velocidad:</span> <span class="text-pink-400">★★★★</span>☆</div>
+            <div class="flex justify-between"><span>Lógica:</span> <span class="text-pink-400">★★★</span>☆☆</div>
+            
+          </div>
+        </div>
+<div class="bg-brand-card border border-lime-500/20 rounded-xl p-4 flex flex-col justify-between hover:border-lime-500/50 transition-all duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[9px] font-bold text-lime-400 px-2 py-0.5 bg-lime-950/60 border border-lime-800 rounded">AUXILIAR</span>
+              <span class="text-xs font-bold text-slate-300">★ 6.0</span>
+            </div>
+            <h3 class="mono text-base font-bold text-white mb-1">Nemotron 3 Ultra</h3>
+            <p class="text-[11px] text-slate-400 mb-4 leading-normal">Modelo de Nvidia. Gran capacidad cruda, pero suele descuidar formatos de salida locales.</p>
+          </div>
+          <div class="space-y-1 text-[10px] text-slate-300 border-t border-slate-900 pt-3">
+            <div class="flex justify-between"><span>Capacidad:</span> <span class="text-lime-400">★★★★</span>☆</div>
+            <div class="flex justify-between"><span>Formatos:</span> <span class="text-lime-400">★★</span>☆☆☆</div>
+            <div class="flex justify-between"><span>Idioma:</span> <span class="text-lime-400">★★★</span>☆☆</div>
+            
+          </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Interactive Grid Filter Controls -->
+    <section class="mb-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+          🗺️ Matriz de Decisiones de Desarrollo
+        </h2>
+        <!-- Filters -->
+        <div class="flex flex-wrap gap-1.5" id="filter-container">
+          <button onclick="filterCards('all')" class="filter-btn active px-3 py-1.5 rounded-lg text-xs font-semibold border bg-blue-600 border-blue-500 text-white transition-all duration-200">
+            Todas
+          </button>
+          <button onclick="filterCards('deepseek')" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 hover:border-cyan-500 text-slate-400 hover:text-cyan-400 transition-all duration-200">
+            Con DeepSeek
+          </button>
+          <button onclick="filterCards('pickle')" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 hover:border-emerald-500 text-slate-400 hover:text-emerald-400 transition-all duration-200">
+            Con Big Pickle
+          </button>
+          <button onclick="filterCards('mimo')" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 hover:border-amber-500 text-slate-400 hover:text-amber-400 transition-all duration-200">
+            Con MiMo-V2.5
+          </button>
+          <button onclick="filterCards('north')" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-800 hover:border-pink-500 text-slate-400 hover:text-pink-400 transition-all duration-200">
+            Con North Mini
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Situations Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="situations-grid">
+      
+      <!-- Card 1: Programar desde Cero -->
+      <div class="situation-card bg-brand-card rounded-2xl p-6 border border-slate-900 hover:border-slate-800 transition-all duration-300 flex flex-col justify-between" data-model="deepseek">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+            </span>
+            <div class="text-right">
+              <span class="text-[9px] text-slate-500 uppercase font-bold block">Modelo Óptimo</span>
+              <span id="optimo-tarea-1" class="mono text-xs font-bold text-cyan-400">deepseek-v4-flash-free</span>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">1. Programar desde cero</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Generación de código estructurado, esqueletos iniciales de proyectos, nuevas funciones y scripts lógicos directos. Su latencia es minúscula.
+          </p>
+        </div>
+        <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-900">
+          <span class="text-[10px] font-bold text-cyan-400 block mb-1">💡 Consejo Pro:</span>
+          <p class="text-[11px] text-slate-300">Pasa un prompt conciso con la especificación de lo que necesitas. Al no requerir razonamientos complejos (de pago), este flash entrega resultados rápidos y precisos.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Debuggear / Errores -->
+      <div class="situation-card bg-brand-card rounded-2xl p-6 border border-slate-900 hover:border-slate-800 transition-all duration-300 flex flex-col justify-between" data-model="deepseek">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+            </span>
+            <div class="text-right">
+              <span class="text-[9px] text-slate-500 uppercase font-bold block">Modelo Óptimo</span>
+              <span id="optimo-tarea-2" class="mono text-xs font-bold text-cyan-400">deepseek-v4-flash-free</span>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">2. Resolver Bugs & Errores</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Debido a que MiniMax ya no es gratuito, DeepSeek hereda esta tarea al tener el mejor nivel de consistencia para depurar sin entrar en bucles de API.
+          </p>
+        </div>
+        <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-900">
+          <span class="text-[10px] font-bold text-cyan-400 block mb-1">💡 Consejo Pro:</span>
+          <p class="text-[11px] text-slate-300">Proporciona el fragmento defectuoso junto con el registro de errores (*stacktrace*). Al no equivocarse en formatos de herramienta, aplica parches ágilmente.</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Planear / Diseñar -->
+      <div class="situation-card bg-brand-card rounded-2xl p-6 border border-slate-900 hover:border-slate-800 transition-all duration-300 flex flex-col justify-between" data-model="pickle">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+            </span>
+            <div class="text-right">
+              <span class="text-[9px] text-slate-500 uppercase font-bold block">Modelo Óptimo</span>
+              <span id="optimo-tarea-3" class="mono text-xs font-bold text-emerald-400">big-pickle</span>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">3. Planificación & Arquitectura</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Estructuración de flujos, planeación técnica, diseño de bases de datos y análisis preliminar del proyecto de manera conversacional.
+          </p>
+        </div>
+        <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-900">
+          <span class="text-[10px] font-bold text-emerald-400 block mb-1">💡 Consejo Pro:</span>
+          <p class="text-[11px] text-slate-300">Big Pickle tiene un excelente procesamiento lingüístico y lógico para dar pasos firmes antes de escribir código.</p>
+        </div>
+      </div>
+
+      <!-- Card 4: Tests Unitarios -->
+      <div class="situation-card bg-brand-card rounded-2xl p-6 border border-slate-900 hover:border-slate-800 transition-all duration-300 flex flex-col justify-between" data-model="deepseek">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </span>
+            <div class="text-right">
+              <span class="text-[9px] text-slate-500 uppercase font-bold block">Modelo Óptimo</span>
+              <span id="optimo-tarea-4" class="mono text-xs font-bold text-cyan-400">deepseek-v4-flash-free</span>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">4. Cobertura de Tests</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Crear suites de pruebas estructuradas en Pytest, Jest, Mocha o JUnit. Las pruebas unitarias requieren patrones de código rigurosos que este modelo clava.
+          </p>
+        </div>
+        <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-900">
+          <span class="text-[10px] font-bold text-cyan-400 block mb-1">💡 Consejo Pro:</span>
+          <p class="text-[11px] text-slate-300">Indícale la clase que deseas testear y pídele específicamente pruebas contemplando los casos vacíos y de error físico.</p>
+        </div>
+      </div>
+
+      <!-- Card 5: Logs y Archivos Gigantes -->
+      <div class="situation-card bg-brand-card rounded-2xl p-6 border border-slate-900 hover:border-slate-800 transition-all duration-300 flex flex-col justify-between" data-model="mimo">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </span>
+            <div class="text-right">
+              <span class="text-[9px] text-slate-500 uppercase font-bold block">Modelo Óptimo</span>
+              <span id="optimo-tarea-5" class="mono text-xs font-bold text-amber-400">mimo-v2.5-free</span>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">5. Ingesta de Contexto Largo</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Escanear un log de servidor entero o auditar archivos monolíticos de código legacy. Mimo lee miles de líneas en un parpadeo con una ventana de contexto enorme.
+          </p>
+        </div>
+        <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-900">
+          <span class="text-[10px] font-bold text-amber-400 block mb-1">💡 Consejo Pro:</span>
+          <p class="text-[11px] text-slate-300">Debido a su alta velocidad (1.4x de DeepSeek), es un lector inmejorable. No lo uses para codificación con lógica de alta abstracción.</p>
+        </div>
+      </div>
+
+      <!-- Card 6: Documentar y Explicar -->
+      <div class="situation-card bg-brand-card rounded-2xl p-6 border border-slate-900 hover:border-slate-800 transition-all duration-300 flex flex-col justify-between" data-model="pickle">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            </span>
+            <div class="text-right">
+              <span class="text-[9px] text-slate-500 uppercase font-bold block">Modelo Óptimo</span>
+              <span id="optimo-tarea-6" class="mono text-xs font-bold text-emerald-400">big-pickle</span>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">6. Escribir Documentación</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Generar comentarios claros con formatos JSDoc / Docstrings, o crear el archivo `README.md` del repositorio con una prosa impecable y estructurada.
+          </p>
+        </div>
+        <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-900">
+          <span class="text-[10px] font-bold text-emerald-400 block mb-1">💡 Consejo Pro:</span>
+          <p class="text-[11px] text-slate-300">Dile a Big Pickle: *"Explica esta lógica con analogías sencillas y diséñame una tabla en Markdown explicando cada variable"*. Funciona de forma fenomenal.</p>
+        </div>
+      </div>
+
+      <!-- Card 7: Tareas Ágiles Rápidas -->
+      <div class="situation-card bg-brand-card rounded-2xl p-6 border border-slate-900 hover:border-slate-800 transition-all duration-300 flex flex-col justify-between" data-model="north">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="p-2.5 rounded-xl bg-pink-500/10 text-pink-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </span>
+            <div class="text-right">
+              <span class="text-[9px] text-slate-500 uppercase font-bold block">Modelo Óptimo</span>
+              <span id="optimo-tarea-7" class="mono text-xs font-bold text-pink-400">north-mini-code-free</span>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">7. Tareas Rápidas & Boilerplate</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Tareas rutinarias como formateo JSON, conversiones simples, generación de snippets repetitivos o maquetación básica HTML que no requieran gran abstracción.
+          </p>
+        </div>
+        <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-900">
+          <span class="text-[10px] font-bold text-pink-400 block mb-1">💡 Consejo Pro:</span>
+          <p class="text-[11px] text-slate-300">Utilízalo como modelo secundario rápido. Alivia la carga de solicitudes sobre DeepSeek Flash para mantener tu cola de uso ágil.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Interactive CLI Helper -->
+    <section class="mt-12 bg-slate-900/60 border border-slate-900 rounded-2xl p-6 max-w-3xl mx-auto">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="text-sm font-bold text-slate-200 flex items-center gap-2 mono">
+          📟 Terminal OpenCode Helper
+        </h3>
+        <span class="text-[10px] text-slate-500 mono">Haz clic para copiar</span>
+      </div>
+      <p class="text-xs text-slate-400 mb-4">
+        Utiliza estos comandos rápidos directamente en tu terminal o CLI interactiva de OpenCode para conmutar de cerebro gratuitamente:
+      </p>
+      
+      <div class="space-y-3">
+        
+        <!-- Command 1 -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-brand-card rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
+          <span class="text-xs text-slate-300">Activar el Predeterminado (DeepSeek)</span>
+          <div class="flex items-center gap-2">
+            <code class="mono text-[11px] text-cyan-400 bg-cyan-950/30 px-2.5 py-1.5 rounded border border-cyan-900/50" id="cmd-ds">/model opencode/deepseek-v4-flash-free</code>
+            <button onclick="copyCommand('cmd-ds')" class="px-2.5 py-1.5 rounded bg-slate-800 text-slate-300 hover:bg-slate-700 text-xs font-semibold transition-colors">
+              Copiar
+            </button>
+          </div>
+        </div>
+
+        <!-- Command 2 -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-brand-card rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
+          <span class="text-xs text-slate-300">Activar Todoterreno (Big Pickle)</span>
+          <div class="flex items-center gap-2">
+            <code class="mono text-[11px] text-emerald-400 bg-emerald-950/30 px-2.5 py-1.5 rounded border border-emerald-900/50" id="cmd-pickle">/model opencode/big-pickle</code>
+            <button onclick="copyCommand('cmd-pickle')" class="px-2.5 py-1.5 rounded bg-slate-800 text-slate-300 hover:bg-slate-700 text-xs font-semibold transition-colors">
+              Copiar
+            </button>
+          </div>
+        </div>
+
+        <!-- Command 3 -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-brand-card rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
+          <span class="text-xs text-slate-300">Activar Contexto Extenso (MiMo-V2.5)</span>
+          <div class="flex items-center gap-2">
+            <code class="mono text-[11px] text-amber-400 bg-amber-950/30 px-2.5 py-1.5 rounded border border-amber-900/50" id="cmd-mimo">/model opencode/mimo-v2.5-free</code>
+            <button onclick="copyCommand('cmd-mimo')" class="px-2.5 py-1.5 rounded bg-slate-800 text-slate-300 hover:bg-slate-700 text-xs font-semibold transition-colors">
+              Copiar
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Success Copy Message -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-emerald-950 border border-emerald-500 text-emerald-400 px-4 py-2 rounded-lg shadow-lg text-xs font-semibold opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+      ¡Copiado al portapapeles con éxito!
+    </div>
+
+  </main>
+
+  <footer class="text-center text-[10px] text-slate-600 mt-16 max-w-md mx-auto leading-relaxed px-4">
+    OpenCode, OpenCode Zen, y sus interfaces son marcas registradas de Terminal Products. Todos los datos han sido extraídos de su portal de documentación oficial de julio de 2026.
+  </footer>
+
+  <script>
+    // Filtering logic
+    function filterCards(model) {
+      // 1. Update filter buttons UI
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'bg-blue-600', 'border-blue-500', 'text-white');
+        btn.classList.add('border-slate-800', 'text-slate-400');
+      });
+
+      // Highlight active button
+      const activeBtn = event.currentTarget;
+      activeBtn.classList.remove('border-slate-800', 'text-slate-400');
+      activeBtn.classList.add('active', 'bg-blue-600', 'border-blue-500', 'text-white');
+
+      // 2. Filter the cards
+      const cards = document.querySelectorAll('.situation-card');
+      cards.forEach(card => {
+        if (model === 'all') {
+          card.style.display = 'flex';
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1)';
+        } else {
+          if (card.getAttribute('data-model') === model) {
+            card.style.display = 'flex';
+            card.style.opacity = '1';
+            card.style.transform = 'scale(1)';
+          } else {
+            card.style.display = 'none';
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+          }
+        }
+      });
+    }
+
+    // Safe clipboard copy utilizing the recommended legacy fallback for iframe isolation environments
+    function copyCommand(elementId) {
+      const codeElement = document.getElementById(elementId);
+      const textToCopy = codeElement.textContent;
+
+      // Safe creation of temporary element for clipboard extraction
+      const tempTextArea = document.createElement('textarea');
+      tempTextArea.value = textToCopy;
+      document.body.appendChild(tempTextArea);
+      tempTextArea.select();
+      
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showToast();
+        }
+      } catch (err) {
+        console.error('Error al intentar copiar el comando: ', err);
+      }
+      
+      document.body.removeChild(tempTextArea);
+    }
+
+    // Show toast message function
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2500);
+    }
+  </script>
+</body>
+</html>

@@ -26,7 +26,7 @@ from html.parser import HTMLParser
 # CONFIGURATION
 # =============================================================================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-HTML_PATH = os.path.join(BASE_DIR, "infograf_a_interactiva (1).html")
+HTML_PATH = os.path.join(BASE_DIR, "index.html")
 STATE_PATH = os.path.join(BASE_DIR, "estado_modelos.json")
 PRICING_URL = "https://opencode.ai/docs/zen/#pricing"
 MONTHS_ES = [

@@ -35,9 +35,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html estado_modelos.json
-          if ! git diff --cached --quiet; then
-            git commit -m "auto: actualizar modelos gratuitos $(date +'%d/%m/%Y')"
-            git pull --rebase origin main
-            git push
-          fi
+          git add -A
+          git commit -m "auto: actualizar modelos $(date +'%d/%m/%Y')" || true
+          git pull --rebase origin main
+          git push

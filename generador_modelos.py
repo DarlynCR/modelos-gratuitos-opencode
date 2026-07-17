@@ -33,7 +33,7 @@ PRICING_URL = "https://opencode.ai/docs/zen/#pricing"
 # Timezone offset in hours (UTC-5 = -5). Set TZ_OFFSET env var in GitHub Actions if needed.
 TZ_OFFSET = int(os.environ.get("TZ_OFFSET", "-5"))
 
-def now_local():
+def get_now():
     return datetime.now(timezone.utc) + timedelta(hours=TZ_OFFSET)
 
 MONTHS_ES = [
@@ -245,7 +245,7 @@ def load_previous_state():
 def save_current_state(free_models):
     state = {
         "free_models": sorted(free_models),
-        "last_updated": now_local().isoformat()
+        "last_updated": get_now().isoformat()
     }
     with open(STATE_PATH, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2, ensure_ascii=False)
@@ -335,22 +335,20 @@ def update_html(free_models, force=False):
     with open(HTML_PATH, "r", encoding="utf-8") as f:
         html = f.read()
 
-    now = now_local()
-    now_local = now.strftime("%d/%m/%Y %H:%M")
+    now = get_now()
+    now_str = now.strftime("%d/%m/%Y %H:%M")
     month_name = MONTHS_ES[now.month]
     year = now.year
 
-    # Always: update month/year badge
     html = re.sub(
         r'(⚡\s*Datos Oficiales Actualizados\s*[•·]\s*)[^<]+',
         f'\\1{month_name} {year}',
         html
     )
 
-    # Always: update last-run timestamp
     html = re.sub(
         r'(<p id="ultima-actualizacion"[^>]*>)[^<]+(</p>)',
-        f'\\1🔄 Última actualización: {now_local}\\2',
+        f'\\1🔄 Última actualización: {now_str}\\2',
         html
     )
 
@@ -455,7 +453,7 @@ def main():
 
     print("=" * 60)
     print("  OpenCode Zen Free Models Generator")
-    print(f"  {now_local().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"  {get_now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 60)
 
     # Step 1: Scrape pricing page

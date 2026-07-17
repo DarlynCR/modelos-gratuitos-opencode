@@ -34,6 +34,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "auto: actualizar modelos $(date +'%d/%m/%Y')" || true
-          git pull --rebase origin main
-          git push
+          if git diff --staged --quiet; then
+            echo "No hay cambios que commitear"
+            exit 0
+          fi
+          git commit -m "auto: actualizar modelos $(date +'%d/%m/%Y')"
+          git push --force-with-lease origin main

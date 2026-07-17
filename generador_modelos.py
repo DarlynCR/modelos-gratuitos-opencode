@@ -19,7 +19,7 @@ import subprocess
 import sys
 import urllib.error
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
 
 # =============================================================================
@@ -29,6 +29,13 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 HTML_PATH = os.path.join(BASE_DIR, "index.html")
 STATE_PATH = os.path.join(BASE_DIR, "estado_modelos.json")
 PRICING_URL = "https://opencode.ai/docs/zen/#pricing"
+
+# Timezone offset in hours (UTC-5 = -5). Set TZ_OFFSET env var in GitHub Actions if needed.
+TZ_OFFSET = int(os.environ.get("TZ_OFFSET", "-5"))
+
+def now_local():
+    return datetime.now(timezone.utc) + timedelta(hours=TZ_OFFSET)
+
 MONTHS_ES = [
     "", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
     "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
@@ -238,7 +245,7 @@ def load_previous_state():
 def save_current_state(free_models):
     state = {
         "free_models": sorted(free_models),
-        "last_updated": datetime.now().isoformat()
+        "last_updated": now_local().isoformat()
     }
     with open(STATE_PATH, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2, ensure_ascii=False)
@@ -328,7 +335,7 @@ def update_html(free_models, force=False):
     with open(HTML_PATH, "r", encoding="utf-8") as f:
         html = f.read()
 
-    now = datetime.now()
+    now = now_local()
     now_local = now.strftime("%d/%m/%Y %H:%M")
     month_name = MONTHS_ES[now.month]
     year = now.year
@@ -448,7 +455,7 @@ def main():
 
     print("=" * 60)
     print("  OpenCode Zen Free Models Generator")
-    print(f"  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"  {now_local().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 60)
 
     # Step 1: Scrape pricing page

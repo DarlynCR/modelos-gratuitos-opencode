@@ -328,75 +328,65 @@ def update_html(free_models, force=False):
     with open(HTML_PATH, "r", encoding="utf-8") as f:
         html = f.read()
 
-    # 1. Update fecha-actualizacion
     now = datetime.now()
+    now_local = now.strftime("%d/%m/%Y %H:%M")
     month_name = MONTHS_ES[now.month]
     year = now.year
-    date_pattern = r'(⚡\s*Datos Oficiales Actualizados\s*[•·]\s*)[^<]+'
+
+    # Always: update month/year badge
     html = re.sub(
-        date_pattern,
+        r'(⚡\s*Datos Oficiales Actualizados\s*[•·]\s*)[^<]+',
         f'\\1{month_name} {year}',
         html
     )
 
-    # 2. Update ultima-actualizacion timestamp
-    now_local = now.strftime("%d/%m/%Y %H:%M")
+    # Always: update last-run timestamp
     html = re.sub(
         r'(<p id="ultima-actualizacion"[^>]*>)[^<]+(</p>)',
         f'\\1🔄 Última actualización: {now_local}\\2',
         html
     )
 
-    # 3. Replace cards in contenedor-tarjetas-modelos
-    cards_html = "\n".join(generate_card_html(mid) for mid in free_models)
-    card_pattern = r'(<div id="contenedor-tarjetas-modelos" class="grid[^>]*>)\s*.*?(?=</div>\s*</section>)'
-    html = re.sub(
-        card_pattern,
-        lambda m: m.group(1) + "\n" + cards_html + "\n        ",
-        html,
-        flags=re.DOTALL
-    )
+    # Cards & matrix: only update on force or real model changes
+    if force:
+        cards_html = "\n".join(generate_card_html(mid) for mid in free_models)
+        card_pattern = r'(<div id="contenedor-tarjetas-modelos" class="grid[^>]*>)\s*.*?(?=</div>\s*</section>)'
+        html = re.sub(
+            card_pattern,
+            lambda m: m.group(1) + "\n" + cards_html + "\n        ",
+            html,
+            flags=re.DOTALL
+        )
 
-    # 4. Update decision matrix task spans
-    available = set(free_models)
-    for task_num in TASK_PREFERENCES:
-        best = pick_best_model(task_num, available)
-        if best is None:
-            continue
-        span_id = f"optimo-tarea-{task_num}"
-        # Find span with this id and update text + color
-        cfg = MODEL_CONFIGS.get(best)
-        color = cfg["color"] if cfg else FALLBACK_COLORS[hash(best) % len(FALLBACK_COLORS)]
+        available = set(free_models)
+        for task_num in TASK_PREFERENCES:
+            best = pick_best_model(task_num, available)
+            if best is None:
+                continue
+            span_id = f"optimo-tarea-{task_num}"
+            cfg = MODEL_CONFIGS.get(best)
+            color = cfg["color"] if cfg else FALLBACK_COLORS[hash(best) % len(FALLBACK_COLORS)]
+            id_pattern = rf'(<span id="{span_id}" class="mono text-xs font-bold )text-\w+(-\d+)?("[^>]*>)[^<]+(</span>)'
+            html = re.sub(id_pattern, rf'\1text-{color}-400\3{best}\4', html)
 
-        # Regex to match the span by its id
-        id_pattern = rf'(<span id="{span_id}" class="mono text-xs font-bold )text-\w+(-\d+)?("[^>]*>)[^<]+(</span>)'
-        replacement = rf'\1text-{color}-400\3{best}\4'
-        html = re.sub(id_pattern, replacement, html)
-
-    # 5. Update CLI helper commands
-    available = set(free_models)
-    # Update each command block
-    cmd_mappings = {
-        "cmd-ds": ("deepseek-v4-flash-free", "cyan"),
-        "cmd-pickle": ("big-pickle", "emerald"),
-        "cmd-mimo": ("mimo-v2.5-free", "amber")
-    }
-    for cmd_id, (default_model, default_color) in cmd_mappings.items():
-        if default_model in available:
-            model_to_use = default_model
-            cfg = MODEL_CONFIGS.get(model_to_use)
-            color = cfg["color"] if cfg else default_color
-        elif available:
-            model_to_use = sorted(available)[0]
-            cfg = MODEL_CONFIGS.get(model_to_use)
-            color = cfg["color"] if cfg else default_color
-        else:
-            continue
-        model_id_short = model_to_use.replace("opencode/", "")
-        cmd_text = f"/model opencode/{model_id_short}"
-        cmd_pattern = rf'(<code class="mono text-\[11px\] )text-\w+(-\d+)?( bg-\w+-950/30 px-2\.5 py-1\.5 rounded border border-\w+-900/50" id="{cmd_id}">)[^<]+(</code>)'
-        replacement = rf'\1text-{color}-400\3{cmd_text}\4'
-        html = re.sub(cmd_pattern, replacement, html)
+        for cmd_id, (default_model, default_color) in {
+            "cmd-ds": ("deepseek-v4-flash-free", "cyan"),
+            "cmd-pickle": ("big-pickle", "emerald"),
+            "cmd-mimo": ("mimo-v2.5-free", "amber"),
+        }.items():
+            if default_model in available:
+                m = default_model
+                cfg = MODEL_CONFIGS.get(m)
+                c = cfg["color"] if cfg else default_color
+            elif available:
+                m = sorted(available)[0]
+                cfg = MODEL_CONFIGS.get(m)
+                c = cfg["color"] if cfg else default_color
+            else:
+                continue
+            cmd_text = f"/model opencode/{m}"
+            cmd_pattern = rf'(<code class="mono text-\[11px\] )text-\w+(-\d+)?( bg-\w+-950/30 px-2\.5 py-1\.5 rounded border border-\w+-900/50" id="{cmd_id}">)[^<]+(</code>)'
+            html = re.sub(cmd_pattern, rf'\1text-{c}-400\3{cmd_text}\4', html)
 
     with open(HTML_PATH, "w", encoding="utf-8") as f:
         f.write(html)
@@ -499,15 +489,11 @@ def main():
 
     has_changes = bool(added or removed)
 
-    # Step 4: Update HTML
+    # Step 4: Update HTML (timestamps always, cards only on changes/force)
     print("[4/4] Updating HTML...")
-    updated = False
-    if has_changes or args.force:
-        updated = update_html(free_models)
-        if updated:
-            print(f"  HTML updated: {HTML_PATH}")
-    else:
-        print("  No update needed")
+    updated = update_html(free_models, force=(has_changes or args.force))
+    if updated:
+        print(f"  HTML updated: {HTML_PATH}")
 
     # Save current state
     save_current_state(free_models)

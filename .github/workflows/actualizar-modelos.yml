@@ -44,5 +44,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html estado_modelos.json
-          git commit -m "auto: actualizar modelos gratuitos $(date +'%d/%m/%Y')"
+          git diff --cached --quiet || git commit -m "auto: actualizar modelos gratuitos $(date +'%d/%m/%Y')"
+          git pull --rebase origin main
           git push

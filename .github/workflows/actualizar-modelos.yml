@@ -31,21 +31,13 @@ jobs:
           TZ_OFFSET: "-5"
         run: python generador_modelos.py --no-notify
 
-      - name: Verificar cambios
-        id: git-check
-        run: |
-          if git diff --quiet; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Commitear y pushear cambios
-        if: steps.git-check.outputs.changed == 'true'
+      - name: Commitear y pushear cambios si los hay
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html estado_modelos.json
-          git diff --cached --quiet || git commit -m "auto: actualizar modelos gratuitos $(date +'%d/%m/%Y')"
-          git pull --rebase origin main
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "auto: actualizar modelos gratuitos $(date +'%d/%m/%Y')"
+            git pull --rebase origin main
+            git push
+          fi

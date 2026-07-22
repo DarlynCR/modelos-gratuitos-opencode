@@ -2,9 +2,10 @@
   "free_models": [
     "big-pickle",
     "deepseek-v4-flash-free",
+    "laguna-s-2.1-free",
     "mimo-v2.5-free",
     "nemotron-3-ultra-free",
     "north-mini-code-free"
   ],
-  "last_updated": "2026-07-21T07:23:53.118944+00:00"
+  "last_updated": "2026-07-22T07:25:11.723207+00:00"
 }

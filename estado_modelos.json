@@ -1,6 +1,7 @@
 {
   "free_models": [
     "big-pickle",
+    "fledge-alpha-free",
     "jev-1.13-free",
     "ling-3.0-flash-fin-free",
     "ling-3.1-flash-free",
@@ -12,5 +13,5 @@
     "nemotron-3.5-lightning-free",
     "space-bunny-free"
   ],
-  "last_updated": "2026-10-02T11:30:35.647518+00:00"
+  "last_updated": "2026-10-03T10:03:07.226780+00:00"
 }

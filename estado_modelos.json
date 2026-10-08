@@ -2,7 +2,6 @@
   "free_models": [
     "big-pickle",
     "exo-free",
-    "fledge-alpha-free",
     "jev-1.13-free",
     "ling-3.0-flash-fin-free",
     "ling-3.1-flash-free",
@@ -12,7 +11,8 @@
     "muse-spark-1.3-contributor-free",
     "nemotron-3-ultra-free",
     "nemotron-3.5-lightning-free",
-    "space-bunny-free"
+    "space-bunny-free",
+    "step-5-preview-free"
   ],
-  "last_updated": "2026-10-07T12:41:34.328354+00:00"
+  "last_updated": "2026-10-08T12:45:33.667703+00:00"
 }

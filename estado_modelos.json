@@ -1,6 +1,7 @@
 {
   "free_models": [
     "big-pickle",
+    "cat-jam-free",
     "exo-free",
     "jev-1.13-free",
     "ling-3.0-flash-fin-free",
@@ -14,5 +15,5 @@
     "space-bunny-free",
     "step-5-preview-free"
   ],
-  "last_updated": "2026-10-11T11:33:57.461226+00:00"
+  "last_updated": "2026-10-13T12:57:18.996305+00:00"
 }

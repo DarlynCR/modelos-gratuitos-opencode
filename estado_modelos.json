@@ -2,6 +2,7 @@
   "free_models": [
     "big-pickle",
     "cat-jam-free",
+    "deepseek-v4.1-flash-free",
     "exo-free",
     "jev-1.13-free",
     "longcat-2.5-preview-free",
@@ -10,8 +11,9 @@
     "muse-spark-1.3-contributor-free",
     "nemotron-3-ultra-free",
     "nemotron-3.5-lightning-free",
+    "nemotron-3.5-super-vl-free",
     "space-bunny-free",
     "step-5-preview-free"
   ],
-  "last_updated": "2026-10-14T10:42:45.417478+00:00"
+  "last_updated": "2026-10-15T10:30:17.087337+00:00"
 }

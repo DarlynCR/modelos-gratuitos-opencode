@@ -4,16 +4,15 @@
     "big-pickle",
     "deepseek-v4.1-flash-free",
     "exo-free",
+    "flint-40b-free",
     "glm-5.3-flash-free",
     "jev-1.13-free",
-    "ll-alpha-free",
     "longcat-2.5-preview-free",
     "mimo-v2.5-free",
     "mimo-v2.6-flash-free",
-    "minimax-m3.1-flash-free",
     "nemotron-3-ultra-free",
     "nemotron-3.5-lightning-free",
     "nemotron-3.5-super-vl-free"
   ],
-  "last_updated": "2026-10-21T10:50:11.290863+00:00"
+  "last_updated": "2026-10-22T10:47:31.194102+00:00"
 }

@@ -2,6 +2,7 @@
   "free_models": [
     "beam-free",
     "big-pickle",
+    "crouton-alpha-free",
     "deepseek-v4.1-flash-free",
     "flint-40b-free",
     "glm-5.3-flash-free",
@@ -12,5 +13,5 @@
     "nemotron-3.5-super-vl-free",
     "pulse-alpha-free"
   ],
-  "last_updated": "2026-11-04T13:28:47.044210+00:00"
+  "last_updated": "2026-11-05T13:32:03.764970+00:00"
 }

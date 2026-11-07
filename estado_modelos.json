@@ -6,12 +6,13 @@
     "deepseek-v4.1-flash-free",
     "flint-40b-free",
     "glm-5.3-flash-free",
+    "iceman-free",
+    "inkling-2-small-free",
     "jev-1.13-free",
     "mimo-v2.6-flash-free",
     "nemotron-3-ultra-free",
     "nemotron-3.5-lightning-free",
-    "nemotron-3.5-super-vl-free",
-    "pulse-alpha-free"
+    "nemotron-3.5-super-vl-free"
   ],
-  "last_updated": "2026-11-06T12:48:59.490262+00:00"
+  "last_updated": "2026-11-07T11:44:55.844291+00:00"
 }

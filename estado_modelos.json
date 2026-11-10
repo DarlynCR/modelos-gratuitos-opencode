@@ -2,7 +2,6 @@
   "free_models": [
     "beam-free",
     "big-pickle",
-    "crouton-alpha-free",
     "deepseek-v4.1-flash-free",
     "flint-40b-free",
     "glm-5.3-flash-free",
@@ -11,9 +10,10 @@
     "jev-1.13-free",
     "longcat-2.5-free",
     "mimo-v2.6-flash-free",
+    "minimax-m3.1-flash-free",
     "nemotron-3-ultra-free",
     "nemotron-3.5-lightning-free",
     "nemotron-3.5-super-vl-free"
   ],
-  "last_updated": "2026-11-09T16:18:06.530031+00:00"
+  "last_updated": "2026-11-10T13:29:00.925740+00:00"
 }

@@ -4,7 +4,6 @@
     "big-pickle",
     "deepseek-v4.1-flash-free",
     "flint-40b-free",
-    "glm-5.3-flash-free",
     "hy4-flash-free",
     "iceman-free",
     "inkling-2-small-free",
@@ -14,5 +13,5 @@
     "nemotron-3.5-lightning-free",
     "nemotron-3.5-super-vl-free"
   ],
-  "last_updated": "2026-11-17T14:38:16.563385+00:00"
+  "last_updated": "2026-11-18T14:14:48.460264+00:00"
 }
